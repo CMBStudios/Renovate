@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":automergeMinor",
+    ":label(ready)",
+    "group:linters",
+    ":masterIssueApproval",
+    ":assignee(rarkins)"
+  ],
+  "semanticCommitScope": "deps",
+  "docker": {
+    "pinDigests": true,
+    "semanticCommitType": "build"
+  },
+  "prBodyDefinitions": {
+    "Sourcegraph": "[![code search for \"{{{depName}}}\"](https://sourcegraph.com/search/badge?q=repo:%5Egithub%5C.com/{{{repository}}}%24+case:yes+-file:package%28-lock%29%3F%5C.json+{{{depName}}}&label=matches)](https://sourcegraph.com/search?q=repo:%5Egithub%5C.com/{{{repository}}}%24+case:yes+-file:package%28-lock%29%3F%5C.json+{{{depName}}})"
+  },
+  "prBodyColumns": [
+    "Package",
+    "Update",
+    "Type",
+    "Change",
+    "References",
+    "Sourcegraph"
+  ],
+  "packageRules": [
+    {
+      "packageNames": ["npm", "yarn"],
+      "automerge": false
+    },
+    {
+      "depTypeList": ["dependencies"],
+      "semanticCommitType": "build"
+    },
+    {
+      "packageNames": ["semantic-release"],
+      "semanticCommitType": "build"
+    },
+    {
+      "packageNames": ["got", "gh-got", "gl-got"],
+      "major": {
+        "groupName": "got packages"
+      }
+    }
+  ]
+}

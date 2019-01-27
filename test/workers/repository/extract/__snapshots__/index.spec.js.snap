@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`workers/repository/extract/index extractAllDependencies() runs 1`] = `
+Object {
+  "ansible": Array [
+    Object {},
+  ],
+  "bazel": Array [
+    Object {},
+  ],
+  "buildkite": Array [
+    Object {},
+  ],
+  "bundler": Array [
+    Object {},
+  ],
+  "cargo": Array [
+    Object {},
+  ],
+  "circleci": Array [
+    Object {},
+  ],
+  "composer": Array [
+    Object {},
+  ],
+  "docker-compose": Array [
+    Object {},
+  ],
+  "dockerfile": Array [
+    Object {},
+  ],
+  "gitlabci": Array [
+    Object {},
+  ],
+  "gomod": Array [
+    Object {},
+  ],
+  "gradle": Array [
+    Object {},
+  ],
+  "gradle-wrapper": Array [
+    Object {},
+  ],
+  "kubernetes": Array [
+    Object {},
+  ],
+  "meteor": Array [
+    Object {},
+  ],
+  "npm": Array [
+    Object {},
+  ],
+  "nuget": Array [
+    Object {},
+  ],
+  "nvm": Array [
+    Object {},
+  ],
+  "pip_requirements": Array [
+    Object {},
+  ],
+  "pip_setup": Array [
+    Object {},
+  ],
+  "pipenv": Array [
+    Object {},
+  ],
+  "terraform": Array [
+    Object {},
+  ],
+  "travis": Array [
+    Object {},
+  ],
+}
+`;

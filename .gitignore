@@ -1,0 +1,13 @@
+/node_modules
+/config.js
+/coverage
+/dist
+/tmp
+.DS_Store
+.cache
+/*.log
+/.vscode
+/.idea
+package-lock.json
+
+*.pyc
